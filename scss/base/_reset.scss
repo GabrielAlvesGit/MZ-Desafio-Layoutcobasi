@@ -1,0 +1,66 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: red;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: $primary-color-back;
+}
+
+a {
+  transition: .45s all;
+  text-decoration: none;
+  color: $primary-color-back;
+
+  &:hover{
+    opacity: .4;
+    transition: .35s all;
+  }
+
+  &:focus{
+    background-color: red;
+  }
+}
+
+form,
+input{
+    border: none;
+
+  &:focus,
+  &:focus-visible{
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+li{
+  list-style: none;
+}
+
+.text-green{
+  color: $primary-color-green;
+}
+
+.text-red{
+  color: $primary-color-red;
+}

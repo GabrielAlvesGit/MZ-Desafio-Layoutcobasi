@@ -1,0 +1,245 @@
+.header {
+
+  &__top{
+    width: 100%;
+    padding: 26.36px 0 26.36px;
+    background-color: $primary-color-white;
+    
+    &__left{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      &__logo{
+    
+        &__link{ 
+          width: 16%;
+          height: 87px;
+          object-fit: cover;
+          
+          &:hover{
+
+            &__img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      &__tickers{
+        display: flex;
+        gap: 8px;
+
+        &__ticker{
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 135%;
+          gap: 8px;
+        }
+      }
+
+      &__acess{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__search {
+
+          form{
+           display: flex;
+           gap: 8px;
+  
+            input {
+              display: none;
+              width: 249px;
+              height: 48px;
+              padding: 10px 14px;
+              flex-shrink: 0;
+              border-radius: 8px;
+              border: 1px solid rgba(208, 213, 221, 0.50);
+              transition: .35s all;
+              &:hover{
+                transition: .45s all;
+                opacity: .8;              
+              }
+            }
+
+            button {
+              transition: .35s all;
+
+             &:hover{
+              transition: .45s all;
+              opacity: .4;
+             }
+            }
+          }
+        }
+
+        &__translator{
+
+          &__list {
+         
+            &__item{
+              position: relative;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              cursor: pointer;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 135%; 
+          
+              &:hover{
+              
+                .sublist{
+                  transition: .35s all;
+                  opacity: 1;
+                }
+
+                &::after{
+                  transition: .45s all;
+                  transform: rotate(177deg);
+                }
+              }
+              
+              &::before{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: url('/img/icons/world.png') no-repeat;
+                object-fit: cover;
+                background-position: center;
+                transition: .45s all;
+              }
+
+              &::after{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: url('/img/icons/arrow-dorp.png') no-repeat;
+                object-fit: cover;
+                background-position: center;
+                transition: .45s all;
+              }
+
+            
+              .sublist {
+                opacity: 0;
+                position: absolute;
+                // transition: calc(-50px);
+                top: 25px;
+                width: 100%;
+                padding: 8px;
+                border-radius: 8px;
+                background-color: $primary-color-white;
+                left: 50px;
+                transform: translate(-50%);
+                transition: .45s all;
+
+                &__item{
+
+                  &__link{
+                    display: block;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 135%;
+                    transition: .45s all;
+
+                    &:hover{
+                      transition: .35s all;
+                      opacity: .8;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom{
+    padding: 9px 0 9px;
+    background-color: $secondary-color-green;
+
+    &__navigation{
+
+      &__nav{
+        
+        &__list{
+          display: flex;
+          gap: 80px;
+
+          &__item{
+            position: relative;
+
+            &:hover{
+              transition: .45s all;
+
+              .sublist{
+                transition: .35s all;
+                opacity: 1;
+              }
+            }
+
+            &__link{
+              color: $secondary-color-white;
+              text-align: center;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 155%;
+              padding: 10px;
+            }
+
+            .sublist {
+              position: absolute;
+              display: flex;
+              align-items: stretch;
+              justify-content: center;
+              flex-direction: column;
+              flex-wrap: wrap;
+              width: max-content;
+              max-height: 182px;
+              padding: 8px 39px 0 0;
+              background-color: #05807D;
+              border-radius: 0px 0px 16px 16px;
+              top: 136%;
+              left: 60px;
+              transform: translateX(-50%);
+              column-gap: 37px;
+              opacity: 0;
+
+              &::before {
+                content: '';
+                min-height: 150px;
+                flex-shrink: 0;
+                background: url('/img/coelho.png') no-repeat center center;
+                background-size: cover;
+                transition: .45s all;
+                width: calc((114px / 1));
+              }
+            
+              &__item{
+
+                &__link{
+                  color: $primary-color-white;
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 32px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
