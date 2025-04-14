@@ -39,6 +39,15 @@ a:focus {
   background-color: red;
 }
 
+mark {
+  color: #FFE6A5;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: none;
+}
+
 form,
 input {
   border: none;
@@ -283,6 +292,139 @@ li {
   font-size: 14px;
   font-weight: 500;
   line-height: 32px;
+}
+
+/* ======== pages ======== */
+.pgHome__banners {
+  position: relative;
+  width: 100%;
+  height: 752px;
+}
+.pgHome__banners::before {
+  content: "";
+  background: linear-gradient(270deg, rgba(70, 29, 4, 0) 0%, rgba(70, 29, 4, 0.8) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.pgHome__banners::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  background: url("/img/bottom-banner.png") no-repeat center center;
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: top;
+}
+.pgHome__banners__banner {
+  width: 100%;
+  height: 100%;
+}
+.pgHome__banners__banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.pgHome__banners__contents {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.pgHome__banners__contents > .container {
+  width: 100%;
+  height: 100%;
+  padding-top: 128px;
+}
+.pgHome__banners__contents__content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  gap: 16px;
+}
+.pgHome__banners__contents__content__title {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: normal;
+}
+.pgHome__banners__contents__content__text {
+  color: #D4D4D8;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 155%;
+}
+.pgHome__banners__quickAcess {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 147px;
+}
+.pgHome__banners__quickAcess .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 122px;
+}
+.pgHome__banners__quickAcess__item__img {
+  width: 46px;
+  height: 46px;
+  background-size: cover;
+  background-position: center;
+}
+.pgHome__banners__quickAcess__item__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .pgHome__banners {
+    height: 631px;
+  }
+  .pgHome__banners::after {
+    height: 94px;
+  }
+  .pgHome__banners__contents > .container {
+    padding-top: 99px;
+  }
+  .pgHome__banners__contents__content {
+    width: 100%;
+  }
+  .pgHome__banners__contents__content__title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .pgHome__banners__contents__content__text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .pgHome__banners__quickAcess {
+    bottom: 112px;
+  }
+  .pgHome__banners__quickAcess .container {
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    gap: 33px;
+  }
+  .pgHome__banners__quickAcess__item {
+    flex: 0 0 40%;
+  }
+  .pgHome__banners__quickAcess__item__link {
+    font-size: 14px;
+    gap: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

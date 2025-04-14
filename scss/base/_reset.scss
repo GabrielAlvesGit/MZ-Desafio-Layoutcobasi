@@ -37,6 +37,15 @@ a {
   }
 }
 
+mark{
+  color: $primary-color-orange;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: none;
+}
+
 form,
 input{
     border: none;
