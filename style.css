@@ -647,6 +647,9 @@ li {
     width: 30%;
   }
 }
+.pgHome__ourNumbers {
+  padding: 0 0 104px 0;
+}
 .pgHome__ourNumbers > .container {
   display: flex;
   flex-direction: column;
@@ -711,6 +714,9 @@ li {
 /*=============== BREAKPOINTS ===============*/
 /* For large devices - 1200px */
 @media screen and (max-width: 1200px) {
+  .pgHome__ourNumbers {
+    padding: 0 0 40px 0;
+  }
   .pgHome__ourNumbers__top__title {
     font-size: 32px;
   }
