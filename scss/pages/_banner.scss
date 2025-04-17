@@ -16,7 +16,7 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: 1px;
+      bottom: 0;
       background: url('/img/bottom-banner.png') no-repeat center center;
       width: 100%;
       height: 130px;
@@ -115,7 +115,7 @@
   .pgHome{
 
     &__banners{
-      height: 631px;
+      height: 100%;
 
       &::before {
     
