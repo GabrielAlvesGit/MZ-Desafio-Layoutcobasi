@@ -543,5 +543,109 @@ li {
     width: 100%;
   }
 }
+.pgHome__aboutCobasi {
+  padding: 49px 0 92px 0;
+}
+.pgHome__aboutCobasi > .container {
+  display: flex;
+  gap: 74px;
+}
+.pgHome__aboutCobasi__left {
+  width: 50%;
+}
+.pgHome__aboutCobasi__left__img {
+  width: 499px;
+  height: 376px;
+  border-radius: 8px 8px 0px 8px;
+  overflow: hidden;
+}
+.pgHome__aboutCobasi__left__img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.pgHome__aboutCobasi__right {
+  width: 50%;
+}
+.pgHome__aboutCobasi__right__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 32px;
+}
+.pgHome__aboutCobasi__right__contents__title {
+  color: #222;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pgHome__aboutCobasi__right__contents__text {
+  color: #555;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+.pgHome__aboutCobasi__right__contents__link {
+  display: flex;
+  width: 28%;
+  color: #FFF;
+  font-size: 16px;
+  text-wrap: nowrap;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 155%;
+  padding: 12px 20px 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #00ACA6;
+}
+.pgHome__aboutCobasi__right__contents__link > img {
+  width: 24px;
+  height: 24px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .pgHome__aboutCobasi {
+    padding: 32px 0 64px 0;
+  }
+  .pgHome__aboutCobasi > .container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .pgHome__aboutCobasi__left {
+    width: 100%;
+  }
+  .pgHome__aboutCobasi__left__img {
+    width: 100%;
+    height: 260px;
+  }
+  .pgHome__aboutCobasi__right {
+    width: 100%;
+  }
+  .pgHome__aboutCobasi__right__contents {
+    gap: 24px;
+  }
+  .pgHome__aboutCobasi__right__contents__title {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .pgHome__aboutCobasi__right__contents__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 155%;
+  }
+  .pgHome__aboutCobasi__right__contents__link {
+    width: 30%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
