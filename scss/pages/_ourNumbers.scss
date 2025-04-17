@@ -1,0 +1,109 @@
+.pgHome {
+ 
+  &__ourNumbers{
+
+    >.container {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    &__top{
+
+      &__title {
+        color: $secondary-color-back;
+        font-size: 40px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    &__bottom{
+
+      &__boxs{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 36.33px;
+
+        &__box{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 61%;
+          gap: 16px;
+
+          &__number{
+            display: flex;
+            align-items: center;
+            color: $secondary-color-back;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            > mark {
+              color: $secondary-color-orange;
+            }
+          }
+
+          &__contents{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            
+            &__subtitle{
+              color: $secondary-color-back;
+              text-align: center;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+  
+            &__text{
+              color: $primary-color-back;
+              text-align: center;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%; 
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .pgHome {
+
+    &__ourNumbers{
+
+      &__top{
+
+        &__title{
+          font-size: 32px;
+        }
+      }
+
+      &__bottom{
+
+        &__boxs{
+          flex-direction: column;
+          gap: 48px;
+
+          &__box{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
