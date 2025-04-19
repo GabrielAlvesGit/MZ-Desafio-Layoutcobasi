@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/style.css" />
   <title>Cobasi RI</title>
   <!-- Favicon -->
@@ -13,7 +14,7 @@
   <header class="header">
 
     <!-- Header Top -->
-    <div class="header__top">
+    <div class="header__top js-active">
       <div class="container">
         <div class="header__top__left">
           <!-- Logo -->
@@ -24,15 +25,15 @@
           </div>
 
           <!-- Tickers -->
-          <div class="header__top__left__tickers">
+          <div class="header__top__left__tickers js-close-tickers">
             <div class="header__top__left__tickers__ticker">
               <span class="header__top__left__tickers__ticker__title">ABCD3:</span>
-              <span class="header__top__left__tickers__price text-green">R$ 40,00 (3,08%) <img src="/img/icons/arrow-up.png" alt="arrow" /></span>
+              <span class="header__top__left__tickers__ticker__price text-green">R$ 40,00 (3,08%) <img src="/img/icons/arrow-up.png" alt="arrow" /></span>
             </div>
 
             <div class="header__top__left__tickers__ticker">
               <span class="header__top__left__tickers__ticker__title">IBOV:</span>
-              <span class="header__top__left__tickers__price text-red">140.200 (3,08%) <img src="/img/icons/arrow-down.png" alt="arrow" /></span>
+              <span class="header__top__left__tickers__ticker__price text-red">140.200 (3,08%) <img src="/img/icons/arrow-down.png" alt="arrow" /></span>
             </div>
           </div>
 
@@ -40,9 +41,14 @@
           <div class="header__top__left__acess">
             <div class="header__top__left__acess__search">
               <form action="">
-                <input type="search" placeholder="Pesquisar" name="" id="" />
-                <button><img src="/img/icons/search.png" alt="search" /></button>
+                <input class="js-active-search" type="search" placeholder="Pesquisar" name="" id="" />
+                <button class="js-click-search"><img src="/img/icons/search.png" alt="search" /></button>
               </form>
+            </div>
+
+            <div class="header__top__left__acess__hamburg js-open-menu">
+              <img class="header__top__left__acess__hamburg__open js-open" src="/img/open.png" alt="" />
+              <img class="header__top__left__acess__hamburg__close js-close" src="/img/close.png" alt="" />
             </div>
 
             <div class="header__top__left__acess__translator">
@@ -62,9 +68,57 @@
     </div>
 
     <!-- Header Bottom -->
-    <div class="header__bottom">
+    <div class="header__bottom js-open-navigation">
       <div class="container">
         <div class="header__bottom__navigation">
+
+          <!-- Eu Fiz dessa maneira pois no PHP eu poderia usar um campo em diversas partes -->
+          <div class="header__top__left__acess__translator">
+            <ul class="header__top__left__acess__translator__list">
+              <li class="header__top__left__acess__translator__list__item">
+                Idioma
+                <ul class="sublist">
+                  <li class="sublist__item"><a class="sublist__item__link" href="EN">EN</a></li>
+                  <li class="sublist__item"><a class="sublist__item__link" href="PT">PT</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="header__top__left__acess__translator__accessibility">
+              <li class="header__top__left__acess__translator__accessibility__item">
+                <a class="sublist__item__link" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <mask id="mask0_801_5012" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                  <rect width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_801_5012)">
+                  <path d="M12 6C11.45 6 10.9792 5.80417 10.5875 5.4125C10.1958 5.02083 10 4.55 10 4C10 3.45 10.1958 2.97917 10.5875 2.5875C10.9792 2.19583 11.45 2 12 2C12.55 2 13.0208 2.19583 13.4125 2.5875C13.8042 2.97917 14 3.45 14 4C14 4.55 13.8042 5.02083 13.4125 5.4125C13.0208 5.80417 12.55 6 12 6ZM9 22V9C8 8.91667 6.98333 8.79167 5.95 8.625C4.91667 8.45833 3.93333 8.25 3 8L3.5 6C4.8 6.35 6.18333 6.60417 7.65 6.7625C9.11667 6.92083 10.5667 7 12 7C13.4333 7 14.8833 6.92083 16.35 6.7625C17.8167 6.60417 19.2 6.35 20.5 6L21 8C20.0667 8.25 19.0833 8.45833 18.05 8.625C17.0167 8.79167 16 8.91667 15 9V22H13V16H11V22H9Z" fill="white"/>
+                </g>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="header__top__left__acess__translator__accessibility__item">
+                <ul class="sublist">
+                  <li class="sublist__item">
+                    <a  class="sublist__item__link" href="">A+</a>
+                  </li>
+
+                  <li class="sublist__item">
+                    <a  class="sublist__item__link" href="">a-</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="header__top__left__acess__translator__accessibility__item"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                  <path d="M6.51768 13.344C5.63998 13.344 4.81515 13.1774 4.0432 12.8443C3.27124 12.5112 2.59975 12.0591 2.02871 11.4881C1.45768 10.9171 1.00561 10.2456 0.672507 9.47361C0.339403 8.70165 0.172852 7.87683 0.172852 6.99912C0.172852 6.12142 0.339403 5.2966 0.672507 4.52464C1.00561 3.75269 1.45768 3.08119 2.02871 2.51016C2.59975 1.93912 3.27124 1.48706 4.0432 1.15395C4.81515 0.820849 5.63998 0.654297 6.51768 0.654297C7.39538 0.654297 8.22021 0.820849 8.99216 1.15395C9.76412 1.48706 10.4356 1.93912 11.0066 2.51016C11.5777 3.08119 12.0297 3.75269 12.3629 4.52464C12.696 5.2966 12.8625 6.12142 12.8625 6.99912C12.8625 7.87683 12.696 8.70165 12.3629 9.47361C12.0297 10.2456 11.5777 10.9171 11.0066 11.4881C10.4356 12.0591 9.76412 12.5112 8.99216 12.8443C8.22021 13.1774 7.39538 13.344 6.51768 13.344ZM7.15216 12.0274C8.41055 11.8688 9.46538 11.3163 10.3166 10.3698C11.1679 9.42338 11.5935 8.29981 11.5935 6.99912C11.5935 5.69843 11.1679 4.57487 10.3166 3.62843C9.46538 2.682 8.41055 2.12947 7.15216 1.97085V12.0274Z" fill="#00ACA6"/>
+                  </svg>
+                  Contraste
+              </li>
+            </ul>
+          </div>
+          
           <nav class="header__bottom__navigation__nav">
             <ul class="header__bottom__navigation__nav__list">
               <li class="header__bottom__navigation__nav__list__item">
@@ -146,7 +200,7 @@
               </li>
 
               <li class="header__bottom__navigation__nav__list__item">
-                <a class="header__bottom__navigation__nav__list__item__link" href="">A Companhia</a>
+                <a class="header__bottom__navigation__nav__list__item__link" href="">Institucional</a>
                 <ul class="sublist">
                   <li class="sublist__item">
                     <a class="sublist__item__link" href="">Notícias</a>
@@ -161,6 +215,8 @@
               </li>
             </ul>
           </nav>
+
+          <p class="header__bottom__navigation__text">Copyright © 2024 Cobasi. Todos os direitos reservados.</p>
         </div>
       </div>
     </div>
@@ -643,5 +699,6 @@
     </footer>
   </main>
   
+  <script src="/js/header.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ p {
   color: $primary-color-back;
 }
 
-a {
+a{
   transition: .45s all;
   text-decoration: none;
   color: $primary-color-back;
@@ -33,7 +33,7 @@ a {
   }
 
   &:focus{
-    background-color: red;
+    background-color: $secondary-color-orange;
   }
 }
 
