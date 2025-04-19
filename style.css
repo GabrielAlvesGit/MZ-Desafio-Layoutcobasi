@@ -840,6 +840,19 @@ li {
     flex: 40%;
   }
 }
+.scrollup {
+  position: fixed;
+  right: 20px;
+  bottom: -100px;
+  background-color: #FF8200;
+  padding: 15px 17px;
+  border-radius: 61%;
+  transition: 0.35s all;
+}
+.scrollup.active {
+  bottom: 20px;
+}
+
 /* ======== pages ======== */
 .pgHome__banners {
   position: relative;
