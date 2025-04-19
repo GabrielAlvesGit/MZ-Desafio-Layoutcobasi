@@ -443,11 +443,18 @@ li {
     display: none;
   }
   .header__bottom {
-    display: none;
-    padding: 19px 0 31px 0;
+    opacity: 0;
+    height: 0;
+    padding: 0;
   }
   .header__bottom.active {
-    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.45s all;
+    padding: 19px 0 31px 0;
   }
   .header__bottom__navigation .header__top__left__acess__translator {
     display: flex;
